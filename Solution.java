@@ -65,6 +65,7 @@ class Order{
 }
 
 class Grid{
+  int grid[][];
   int rows,cols;
   int payload,turns;
   int[] products;
