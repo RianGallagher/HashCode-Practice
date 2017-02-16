@@ -88,27 +88,27 @@ class Grid{
     W = warehouses.length;
 
     //Populate grid with drones
-	for(int i = 0; i < drones.length; i++)
-		grid[drones[i].r][drones[i].c] = 2;
+    for(int i = 0; i < drones.length; i++)
+	grid[drones[i].r][drones[i].c] = 2;
 
 	//Populate grid with warehouses
-	for(int i = 0; i < warehouses.length; i++){
-		Warehouse temp = warehouses[i];
-		//if position already has a drone
-		if(grid[temp.r][temp.c] == 2){
-			grid[temp.r][temp.c] = 4;
-		}
-		else
-			grid[temp.r][temp.c] = 1;
+    for(int i = 0; i < warehouses.length; i++){
+	Warehouse temp = warehouses[i];
+	//if position already has a drone
+	if(grid[temp.r][temp.c] == 2){
+		grid[temp.r][temp.c] = 4;
+	}
+	else
+		grid[temp.r][temp.c] = 1;
 	}
 
 	//Populate grid with customers
-	for(int i = 0; i < orders.length; i++){
-		Order temp = orders[i];
-		if(grid[temp.r][temp.c] == 2)
-			grid[temp.r][temp.c] = 5;
-		else
-			grid[temp.r][temp.c] = 3;
+     for(int i = 0; i < orders.length; i++){
+	Order temp = orders[i];
+	if(grid[temp.r][temp.c] == 2)
+		grid[temp.r][temp.c] = 5;
+	else
+		grid[temp.r][temp.c] = 3;
 	}
   }
 	/*
