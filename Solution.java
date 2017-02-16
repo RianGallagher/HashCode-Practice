@@ -95,8 +95,8 @@ class Grid{
 	for(int i = 0; i < warehouses.length; i++){
 		Warehouse temp = warehouses[i];
 		//if position already has a drone
-		if(grid[temp.r][temp.c] == 2){
-			grid[temp.r][temp.c] = 4;
+		if(grid[temp.r][temp.c] > 1){
+			grid[temp.r][temp.c] += 2;
 		}
 		else
 			grid[temp.r][temp.c] = 1;
@@ -105,8 +105,8 @@ class Grid{
 	//Populate grid with customers
 	for(int i = 0; i < orders.length; i++){
 		Order temp = orders[i];
-		if(grid[temp.r][temp.c] == 2)
-			grid[temp.r][temp.c] = 5;
+		if(grid[temp.r][temp.c] > 2)
+			grid[temp.r][temp.c] += 2;
 		else
 			grid[temp.r][temp.c] = 3;
 	}
