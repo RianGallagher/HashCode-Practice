@@ -88,8 +88,8 @@ class Grid{
     W = warehouses.length;
 
     //Populate grid with drones
-	for(int i = 0; i < drones.length; i++)
-		grid[drones[i].r][drones[i].c] = 2;
+    for(int i = 0; i < drones.length; i++)
+	grid[drones[i].r][drones[i].c] = 2;
 
 	//Populate grid with warehouses
 	for(int i = 0; i < warehouses.length; i++){
@@ -118,6 +118,7 @@ class Grid{
 	 * 3 is a customer
 	 * 4 is drone and warehouse
 	 * 5 is drone and customer
+	 *
 	 */
     public void printGrid(){
 		for(int i = 0; i < grid.length; i++){
